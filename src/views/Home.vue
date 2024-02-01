@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import axios from 'axios';
 
 import Pagination from '@/components/Pagination.vue';
@@ -10,7 +10,9 @@ const page = ref(1);
 const limit = ref(8);
 const API_URL = `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`;
 
-products.value = await axios.get(API_URL).then((res) => res.data);
+onMounted(async () => {
+	products.value = await axios.get(API_URL).then((res) => res.data);
+});
 
 watch(page, async () => {
 	products.value = await axios.get(API_URL).then((res) => res.data);
