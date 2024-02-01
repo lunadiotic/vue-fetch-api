@@ -6,11 +6,11 @@ import Home from './views/Home.vue';
 <template>
 	<!-- <RouterLink to="/">Home</RouterLink>
 	<RouterLink to="/About">About</RouterLink> -->
-	<!-- <RouterView /> -->
-	<Suspense>
+	<RouterView />
+	<!-- <Suspense>
 		<template #default> <Home /> </template>
 		<template #fallback> Loading... </template>
-	</Suspense>
+	</Suspense> -->
 </template>
 
 <style scoped></style>
