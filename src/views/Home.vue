@@ -10,7 +10,6 @@ const products = ref([]);
 products.value = await axios
 	.get('http://localhost:3000/products')
 	.then((res) => res.data);
-console.log(products.value);
 
 // async function fetchData() {
 // 	const response = await axios.get('http://localhost:3000/products');
@@ -24,7 +23,11 @@ console.log(products.value);
 <template>
 	<main>
 		<div class="product-grid">
-			<ProductCard />
+			<ProductCard
+				v-for="product in products"
+				:key="product.id"
+				:product="product"
+			/>
 		</div>
 		<Pagination />
 	</main>
