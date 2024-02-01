@@ -1,0 +1,424 @@
+{
+	"products": [
+		{
+			"id": "1",
+			"title": "Smartphone Galaxy S22",
+			"description": "The latest flagship smartphone with advanced camera features and 5G connectivity.",
+			"price": 899.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "2",
+			"title": "Laptop ProBook X360",
+			"description": "A versatile 2-in-1 laptop with a powerful processor and long-lasting battery life.",
+			"price": 1299.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "3",
+			"title": "Wireless Noise-Canceling Headphones",
+			"description": "Immerse yourself in high-quality audio with these comfortable and noise-canceling headphones.",
+			"price": 199.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "4",
+			"title": "Ultra HD 4K Smart TV",
+			"description": "Experience stunning visuals and smart features on this large-screen 4K television.",
+			"price": 1499.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "5",
+			"title": "Digital Camera EOS R5",
+			"description": "Capture professional-grade photos and videos with this high-performance mirrorless camera.",
+			"price": 2999.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "6",
+			"title": "Fitness Tracker FitPro Max",
+			"description": "Stay active and monitor your health with this feature-packed fitness tracker.",
+			"price": 79.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "7",
+			"title": "Gaming Console X-Play 9000",
+			"description": "Immerse yourself in the world of gaming with this powerful and sleek gaming console.",
+			"price": 499.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "8",
+			"title": "Portable Bluetooth Speaker",
+			"description": "Enjoy high-quality audio on the go with this compact and portable Bluetooth speaker.",
+			"price": 59.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "9",
+			"title": "Electric Standing Desk",
+			"description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
+			"price": 449.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "10",
+			"title": "Smart Home Security System",
+			"description": "Protect your home with this smart security system featuring cameras and sensors.",
+			"price": 349.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "11",
+			"title": "Wireless Charging Pad",
+			"description": "Charge your compatible devices effortlessly with this sleek wireless charging pad.",
+			"price": 39.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "12",
+			"title": "Ultra-Thin Laptop Stand",
+			"description": "Elevate your laptop for ergonomic use with this ultra-thin and portable laptop stand.",
+			"price": 29.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "13",
+			"title": "Smart Thermostat",
+			"description": "Control and monitor your home's temperature with this intelligent and energy-efficient smart thermostat.",
+			"price": 129.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "14",
+			"title": "High-Performance Blender",
+			"description": "Blend smoothies, soups, and more with ease using this powerful high-performance blender.",
+			"price": 149.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "15",
+			"title": "Durable Travel Backpack",
+			"description": "Travel in style and comfort with this durable and spacious travel backpack.",
+			"price": 79.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "16",
+			"title": "Professional Espresso Machine",
+			"description": "Create barista-quality espresso at home with this professional-grade espresso machine.",
+			"price": 499.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "17",
+			"title": "Smart LED Desk Lamp",
+			"description": "Illuminate your workspace with adjustable brightness and color temperature using this smart LED desk lamp.",
+			"price": 69.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "18",
+			"title": "Ultra HD Action Camera",
+			"description": "Capture your adventures in stunning detail with this compact and waterproof Ultra HD action camera.",
+			"price": 179.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "19",
+			"title": "Comfortable Ergonomic Chair",
+			"description": "Stay comfortable during long work sessions with this ergonomic office chair featuring adjustable lumbar support.",
+			"price": 249.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "20",
+			"title": "Stainless Steel Kitchen Knife Set",
+			"description": "Upgrade your kitchen with this high-quality stainless steel knife set for precision cutting.",
+			"price": 89.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "21",
+			"title": "Smart Wi-Fi Router",
+			"description": "Ensure fast and reliable internet connectivity with this advanced smart Wi-Fi router.",
+			"price": 129.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "22",
+			"title": "Noise-Canceling Over-Ear Headphones",
+			"description": "Immerse yourself in crystal-clear audio with these premium noise-canceling over-ear headphones.",
+			"price": 249.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "23",
+			"title": "Compact Digital Air Fryer",
+			"description": "Enjoy healthier cooking with this compact and efficient digital air fryer.",
+			"price": 89.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "24",
+			"title": "Smart Doorbell Camera",
+			"description": "Enhance your home security with this smart doorbell camera featuring real-time video and two-way communication.",
+			"price": 179.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "25",
+			"title": "Fitness Smartwatch",
+			"description": "Track your fitness goals and stay connected with this feature-packed fitness smartwatch.",
+			"price": 159.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "26",
+			"title": "Premium Leather Wallet",
+			"description": "Organize your essentials in style with this premium leather wallet featuring multiple card slots and a sleek design.",
+			"price": 49.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "27",
+			"title": "Ultra-Slim 4K OLED TV",
+			"description": "Experience stunning visuals and vibrant colors with this ultra-slim 4K OLED television.",
+			"price": 1999.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "28",
+			"title": "Wireless Charging Stand",
+			"description": "Charge your smartphone wirelessly with this stylish and convenient wireless charging stand.",
+			"price": 59.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "29",
+			"title": "Compact Espresso Maker",
+			"description": "Brew your favorite espresso drinks with this compact and easy-to-use espresso maker.",
+			"price": 119.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "30",
+			"title": "Smart Home Lighting Kit",
+			"description": "Transform your home with customizable smart lighting using this comprehensive smart home lighting kit.",
+			"price": 129.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "31",
+			"title": "High-Resolution In-Ear Monitors",
+			"description": "Experience superior audio quality with these high-resolution in-ear monitors designed for audiophiles.",
+			"price": 179.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "32",
+			"title": "Outdoor Adventure Backpack",
+			"description": "Embark on outdoor adventures with this durable and spacious backpack designed for adventure enthusiasts.",
+			"price": 89.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "33",
+			"title": "Digital Drawing Tablet",
+			"description": "Unleash your creativity with precision using this advanced digital drawing tablet with pressure sensitivity.",
+			"price": 249.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "34",
+			"title": "Bluetooth Karaoke Microphone",
+			"description": "Bring the party to life with this Bluetooth karaoke microphone featuring built-in speakers and colorful LED lights.",
+			"price": 49.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "35",
+			"title": "Smart Indoor Security Camera",
+			"description": "Monitor your home with this smart indoor security camera featuring motion detection and two-way audio.",
+			"price": 69.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "36",
+			"title": "Durable Outdoor Camping Tent",
+			"description": "Enjoy camping adventures with this durable and spacious outdoor camping tent designed for all seasons.",
+			"price": 179.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "37",
+			"title": "Portable External SSD",
+			"description": "Expand your storage with this portable external SSD offering fast data transfer speeds and compact design.",
+			"price": 119.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "38",
+			"title": "Wireless Gaming Mouse",
+			"description": "Enhance your gaming experience with this wireless gaming mouse featuring customizable RGB lighting and precision sensors.",
+			"price": 79.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "39",
+			"title": "Electric Toothbrush with UV Sanitizer",
+			"description": "Maintain oral hygiene with this advanced electric toothbrush featuring UV sanitizer for brush head sterilization.",
+			"price": 89.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "40",
+			"title": "Adjustable Dumbbell Set",
+			"description": "Stay fit and strong with this adjustable dumbbell set, perfect for home workouts.",
+			"price": 199.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "41",
+			"title": "Smart Refrigerator with Touchscreen",
+			"description": "Upgrade your kitchen with this smart refrigerator featuring a touchscreen display, built-in camera, and food management system.",
+			"price": 2999.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "42",
+			"title": "Robot Vacuum Cleaner",
+			"description": "Effortlessly keep your home clean with this smart robot vacuum cleaner featuring mapping technology and automatic charging.",
+			"price": 349.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "43",
+			"title": "Foldable Electric Scooter",
+			"description": "Commute in style with this foldable electric scooter, perfect for urban travel with eco-friendly electric power.",
+			"price": 499.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "44",
+			"title": "Ultra-Wide Gaming Monitor",
+			"description": "Immerse yourself in gaming with this ultra-wide gaming monitor featuring high refresh rates and vibrant colors.",
+			"price": 799.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "45",
+			"title": "Portable Solar Charger",
+			"description": "Stay powered on the go with this portable solar charger, harnessing the sun's energy for your devices.",
+			"price": 79.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "46",
+			"title": "Compact Digital Piano",
+			"description": "Explore your musical talents with this compact digital piano featuring realistic sound and touch-sensitive keys.",
+			"price": 599.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "47",
+			"title": "Folding Electric Bike",
+			"description": "Enjoy convenient and eco-friendly commuting with this folding electric bike, perfect for urban adventures.",
+			"price": 899.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "48",
+			"title": "Smart Air Purifier",
+			"description": "Breathe clean and purified air with this smart air purifier featuring HEPA filtration and smart sensor technology.",
+			"price": 159.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "49",
+			"title": "HD Webcam with Microphone",
+			"description": "Upgrade your virtual meetings with this HD webcam featuring built-in microphone and auto-focus capabilities.",
+			"price": 69.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "50",
+			"title": "Solar-Powered Outdoor Lights",
+			"description": "Illuminate your outdoor spaces with these solar-powered lights, providing energy-efficient and ambient lighting.",
+			"price": 49.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "51",
+			"title": "Professional Video Camera",
+			"description": "Capture cinematic footage with this professional video camera featuring 4K recording and advanced image stabilization.",
+			"price": 1999.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "52",
+			"title": "Smart Coffee Maker",
+			"description": "Brew your perfect cup of coffee with this smart coffee maker featuring customizable brewing options and a built-in grinder.",
+			"price": 129.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "53",
+			"title": "Adjustable Standing Desk Converter",
+			"description": "Transform your regular desk into a standing desk with this adjustable desk converter for ergonomic flexibility.",
+			"price": 89.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "54",
+			"title": "Smart Home Weather Station",
+			"description": "Stay informed about the weather conditions with this smart home weather station featuring sensors for accurate readings.",
+			"price": 79.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "55",
+			"title": "High-Speed Document Scanner",
+			"description": "Efficiently digitize your documents with this high-speed document scanner, perfect for home offices and businesses.",
+			"price": 249.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "56",
+			"title": "Foldable Drone with Camera",
+			"description": "Capture aerial views with this foldable drone featuring a built-in camera and intelligent flight modes.",
+			"price": 499.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "57",
+			"title": "Smart Home Door Lock",
+			"description": "Enhance your home security with this smart door lock featuring keyless entry and remote control capabilities.",
+			"price": 129.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "58",
+			"title": "Modern Office Desk",
+			"description": "Upgrade your workspace with this modern office desk featuring sleek design and ample storage space.",
+			"price": 299.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "59",
+			"title": "Premium Noise-Canceling Earbuds",
+			"description": "Immerse yourself in superior audio quality with these premium noise-canceling earbuds, perfect for on-the-go listening.",
+			"price": 149.99,
+			"image": "https://via.placeholder.com/150"
+		},
+		{
+			"id": "60",
+			"title": "Compact Countertop Microwave",
+			"description": "Effortlessly heat and cook your meals with this compact countertop microwave featuring multiple cooking presets.",
+			"price": 79.99,
+			"image": "https://via.placeholder.com/150"
+		}
+	]
+}
