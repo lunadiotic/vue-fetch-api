@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue';
+import { ref, watchEffect } from 'vue';
 import axios from 'axios';
 
 import Pagination from '@/components/Pagination.vue';
@@ -9,32 +9,26 @@ import Loading from '@/components/Loading.vue';
 const products = ref([]);
 const page = ref(1);
 const limit = ref(8);
-const API_URL = `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`;
 const isLoading = ref(true);
 
-async function fetchData() {
-	const response = await axios.get(API_URL);
-	return response.data;
-}
-
-onMounted(async () => {
+const fetchData = async () => {
+	const API_URL = `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`;
 	try {
-		products.value = await fetchData();
+		const response = await axios.get(API_URL);
+		return response.data;
 	} finally {
-		isLoading.value = false; // Setelah data dimuat, set isLoading ke false
+		isLoading.value = false;
 	}
+};
+
+watchEffect(() => {
+	isLoading.value = true;
+	fetchData().then((data) => {
+		products.value = data;
+	});
 });
 
-watch(page, async () => {
-	isLoading.value = true; // Menetapkan isLoading ke true sebelum mengambil data
-	try {
-		products.value = await fetchData();
-	} finally {
-		isLoading.value = false; // Setelah data dimuat, set isLoading ke false
-	}
-});
-
-function changePage(newPage) {
+const changePage = (newPage) => {
 	if (newPage < 1) {
 		newPage = 1;
 	}
@@ -42,7 +36,7 @@ function changePage(newPage) {
 		newPage = products.value.pages;
 	}
 	page.value = newPage;
-}
+};
 </script>
 
 <template>
