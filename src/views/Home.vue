@@ -5,11 +5,10 @@ import axios from 'axios';
 import Pagination from '@/components/Pagination.vue';
 import ProductCard from '@/components/ProductCard.vue';
 
-const API_URL = `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`;
-
 const products = ref([]);
 const page = ref(1);
 const limit = ref(8);
+const API_URL = `http://localhost:3000/products?_page=${page.value}&_per_page=${limit.value}`;
 
 products.value = await axios.get(API_URL).then((res) => res.data);
 
