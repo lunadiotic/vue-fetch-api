@@ -7,18 +7,18 @@ import ProductCard from '@/components/ProductCard.vue';
 
 const products = ref([]);
 
-// products.value = await axios
-// 	.get('http://localhost:3000/products')
-// 	.then((res) => res.data);
-// console.log(products.value);
+products.value = await axios
+	.get('http://localhost:3000/products')
+	.then((res) => res.data);
+console.log(products.value);
 
-async function fetchData() {
-	const response = await axios.get('http://localhost:3000/products');
-	products.value = response.data;
-	console.log(products.value);
-}
+// async function fetchData() {
+// 	const response = await axios.get('http://localhost:3000/products');
+// 	products.value = response.data;
+// 	console.log(products.value);
+// }
 
-fetchData();
+// fetchData();
 </script>
 
 <template>
