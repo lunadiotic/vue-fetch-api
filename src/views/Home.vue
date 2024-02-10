@@ -2,6 +2,7 @@
 import ProductCard from '@/components/ProductCard.vue';
 import Pagination from '@/components/Pagination.vue';
 import Loading from '@/components/Loading.vue';
+import ProductForm from '@/components/ProductForm.vue';
 
 import { ref, watchEffect } from 'vue';
 import axios from 'axios';
@@ -40,6 +41,7 @@ function changePage(newPage) {
 		<Loading />
 	</div>
 	<main v-else>
+		<ProductForm @add-product="fetchData" />
 		<div class="product-grid">
 			<ProductCard
 				v-for="(product, index) in products.data"

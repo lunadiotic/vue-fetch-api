@@ -12,23 +12,38 @@ function changePage(newPage) {
 </script>
 
 <template>
-	<button
-		class="pagination-button"
-		id="prevPage"
-		@click="changePage(page - 1)"
-		v-show="page > 1"
-	>
-		&lt;
-	</button>
+	<!-- create button first -->
+	<div v-show="page > 1">
+		<button class="pagination-button" id="firstPage" @click="changePage(1)">
+			&lt;&lt;
+		</button>
+		<button
+			class="pagination-button"
+			id="prevPage"
+			@click="changePage(page - 1)"
+			v-show="page > 1"
+		>
+			&lt;
+		</button>
+	</div>
 	<span>Page {{ page }} of {{ totalPages }}</span>
-	<button
-		class="pagination-button"
-		id="nextPage"
-		@click="changePage(page + 1)"
-		v-show="page < totalPages"
-	>
-		&gt;
-	</button>
+	<div v-show="page < totalPages">
+		<button
+			class="pagination-button"
+			id="nextPage"
+			@click="changePage(page + 1)"
+		>
+			&gt;
+		</button>
+		<!-- create button last -->
+		<button
+			class="pagination-button"
+			id="lastPage"
+			@click="changePage(totalPages)"
+		>
+			&gt;&gt;
+		</button>
+	</div>
 </template>
 
 <style scoped>
