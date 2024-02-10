@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router';
 import axios from 'axios';
 
 const props = defineProps({
@@ -9,17 +10,27 @@ const props = defineProps({
 	},
 });
 
+const router = useRouter();
 const product = ref({});
+const API_URL = `http://localhost:3000/products/${props.id}`;
 
 onMounted(() => {
 	fetchData();
 });
 
 async function fetchData() {
-	const API_URL = `http://localhost:3000/products/${props.id}`;
 	try {
 		const response = await axios.get(API_URL);
 		product.value = response.data;
+	} catch (error) {
+		console.error(error);
+	}
+}
+
+async function deleteProduct() {
+	try {
+		await axios.delete(API_URL);
+		router.push('/');
 	} catch (error) {
 		console.error(error);
 	}
@@ -33,6 +44,7 @@ async function fetchData() {
 		<p>Description: {{ product.description }}</p>
 		<p>Price: {{ product.price }}</p>
 		<router-link to="/" class="back-button">Back</router-link>
+		<button @click="deleteProduct" class="delete-button">Delete</button>
 	</div>
 </template>
 
@@ -57,27 +69,34 @@ async function fetchData() {
 	margin-bottom: 5px;
 }
 
-.product-detail button {
-	margin-top: 10px;
-	padding: 10px 20px;
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
 .back-button {
 	display: inline-block;
 	padding: 8px 16px;
 	background-color: #007bff;
 	color: #fff;
 	text-decoration: none;
+	border: none;
 	border-radius: 4px;
 	transition: background-color 0.3s;
 }
 
 .back-button:hover {
 	background-color: #0056b3;
+}
+
+.delete-button {
+	display: inline-block;
+	padding: 8px 16px;
+	background-color: #dc3545;
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+	background-color: #c82333;
+	cursor: pointer;
 }
 </style>
