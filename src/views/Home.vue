@@ -37,14 +37,10 @@ function changePage(newPage) {
 
 async function createProduct(product) {
 	try {
-		const response = await axios.post(
-			'http://localhost:3000/products',
-			product
-		);
-		console.log('Product added:', response.data);
+		await axios.post('http://localhost:3000/products', product);
 		fetchData();
 	} catch (error) {
-		console.error('Error adding product:', error);
+		console.error(error);
 	}
 }
 </script>

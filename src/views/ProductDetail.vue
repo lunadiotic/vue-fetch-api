@@ -1,19 +1,15 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import axios from 'axios';
 import ProductForm from '@/components/ProductForm.vue';
 
-const props = defineProps({
-	id: {
-		type: String,
-		required: true,
-	},
-});
-
+const route = useRoute();
 const router = useRouter();
+
+const id = route.params.id;
 const product = ref({});
-const API_URL = `http://localhost:3000/products/${props.id}`;
+const API_URL = `http://localhost:3000/products/${id}`;
 
 onMounted(() => {
 	fetchData();
@@ -51,16 +47,15 @@ async function deleteProduct() {
 	<div class="product-detail">
 		<h2>{{ product.title }}</h2>
 		<img :src="product.image" :alt="product.title" class="product-image" />
-		<p>Description: {{ product.description }}</p>
-		<p>Price: {{ product.price }}</p>
-		<product-form :product="product" @update-product="updateProduct" />
+		<p>{{ product.description }}</p>
+		<p>Rp{{ product.price }}</p>
+		<ProductForm :product="product" @update-product="updateProduct" />
 		<router-link to="/" class="back-button">Back</router-link>
 		<button @click="deleteProduct" class="delete-button">Delete</button>
 	</div>
 </template>
 
 <style scoped>
-/* Styling untuk halaman detail produk */
 .product-detail {
 	margin-top: 20px;
 	padding: 20px;
@@ -80,13 +75,21 @@ async function deleteProduct() {
 	margin-bottom: 5px;
 }
 
+.product-detail button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
 .back-button {
 	display: inline-block;
 	padding: 8px 16px;
 	background-color: #007bff;
 	color: #fff;
 	text-decoration: none;
-	border: none;
 	border-radius: 4px;
 	transition: background-color 0.3s;
 }
@@ -98,16 +101,14 @@ async function deleteProduct() {
 .delete-button {
 	display: inline-block;
 	padding: 8px 16px;
-	background-color: #dc3545;
+	background-color: #ff0000;
 	color: #fff;
 	text-decoration: none;
-	border: none;
 	border-radius: 4px;
 	transition: background-color 0.3s;
 }
 
 .delete-button:hover {
-	background-color: #c82333;
-	cursor: pointer;
+	background-color: #b30000;
 }
 </style>

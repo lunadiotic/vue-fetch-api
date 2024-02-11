@@ -1,12 +1,11 @@
 <script setup>
-import { ref, defineProps, computed, defineEmits, watchEffect } from 'vue';
+import { ref, defineEmits, watchEffect, computed } from 'vue';
 
-// Deklarasi prop menggunakan defineProps
 const props = defineProps({
-	product: Object, // Prop product dari komponen induk
+	product: Object,
 });
 
-const title = ref('');
+const title = ref(props.product?.title || '');
 const description = ref('');
 const price = ref('');
 const image = ref('');
@@ -21,11 +20,10 @@ watchEffect(() => {
 });
 
 const showForm = ref(false);
+const isUpdate = computed(() => !!props.product);
 
-// Tentukan apakah komponen sedang dalam mode edit
-const isEdit = computed(() => !!props.product);
+const emit = defineEmits(['create-product', 'update-product']);
 
-const emit = defineEmits(['add-product', 'edit-product']);
 function saveProduct() {
 	const formData = {
 		title: title.value,
@@ -33,20 +31,18 @@ function saveProduct() {
 		price: price.value,
 		image: image.value,
 	};
-	if (isEdit.value) {
-		// Kirim data form untuk edit
-		emit('update-product', formData, id.value);
+	if (isUpdate.value) {
+		emit('update-product', formData);
 	} else {
-		// Kirim data form untuk create
 		emit('create-product', formData);
 	}
 }
 </script>
 
 <template>
-	<div class="add-product">
+	<div class="form-container">
 		<button @click="showForm = !showForm">
-			{{ isEdit ? 'Edit' : 'Add' }} Product
+			{{ isUpdate ? 'Edit' : 'Add' }} Product
 		</button>
 		<div v-if="showForm" class="product-form">
 			<form @submit.prevent="saveProduct">
@@ -66,7 +62,7 @@ function saveProduct() {
 </template>
 
 <style scoped>
-.add-product {
+.form-container {
 	text-align: center;
 	margin-top: 20px;
 	display: flex;
@@ -76,7 +72,7 @@ function saveProduct() {
 	margin-bottom: 20px;
 }
 
-.add-product button {
+.form-container button {
 	padding: 10px 20px;
 	margin-top: 10px;
 	background-color: #28a745;
@@ -87,16 +83,16 @@ function saveProduct() {
 	transition: background-color 0.3s, transform 0.2s;
 }
 
-.add-product button:hover {
+.form-container button:hover {
 	background-color: #218838;
 	transform: translateY(-2px);
 }
 
-.add-product button:focus {
+.form-container button:focus {
 	outline: none;
 }
 
-.add-product button:active {
+.form-container button:active {
 	transform: translateY(1px);
 	background-color: #1e7e34;
 }
