@@ -1,68 +1,65 @@
 <script setup>
-import { ref } from 'vue';
-import axios from 'axios';
+import { ref, defineProps, computed, defineEmits, watchEffect } from 'vue';
 
-const emit = defineEmits(['add-product']);
-const fetchData = () => {
-	emit('add-product');
-};
-
-const showForm = ref(false);
-const newProduct = ref({
-	title: '',
-	description: '',
-	price: '',
-	image: '',
+// Deklarasi prop menggunakan defineProps
+const props = defineProps({
+	product: Object, // Prop product dari komponen induk
 });
 
-function showAddForm() {
-	showForm.value = true;
-}
+const title = ref('');
+const description = ref('');
+const price = ref('');
+const image = ref('');
+const id = ref('');
 
-function closeForm() {
-	showForm.value = false;
-}
+watchEffect(() => {
+	title.value = props.product?.title;
+	description.value = props.product?.description;
+	price.value = props.product?.price;
+	image.value = props.product?.image;
+	id.value = props.product?.id;
+});
 
-async function addProduct() {
-	try {
-		const response = await axios.post(
-			'http://localhost:3000/products',
-			newProduct.value
-		);
-		console.log('Product added:', response.data);
-		// Clear the form and close it after adding the product
-		Object.keys(newProduct.value).forEach((key) => {
-			newProduct.value[key] = '';
-		});
-		showForm.value = false;
-		// Fetch data again to update the product list
-		fetchData();
-	} catch (error) {
-		console.error('Error adding product:', error);
+const showForm = ref(false);
+
+// Tentukan apakah komponen sedang dalam mode edit
+const isEdit = computed(() => !!props.product);
+
+const emit = defineEmits(['add-product', 'edit-product']);
+function saveProduct() {
+	const formData = {
+		title: title.value,
+		description: description.value,
+		price: price.value,
+		image: image.value,
+	};
+	if (isEdit.value) {
+		// Kirim data form untuk edit
+		emit('update-product', formData, id.value);
+	} else {
+		// Kirim data form untuk create
+		emit('create-product', formData);
 	}
 }
 </script>
 
 <template>
 	<div class="add-product">
-		<button @click="showAddForm">Add Product</button>
+		<button @click="showForm = !showForm">
+			{{ isEdit ? 'Edit' : 'Add' }} Product
+		</button>
 		<div v-if="showForm" class="product-form">
-			<form @submit.prevent="addProduct">
+			<form @submit.prevent="saveProduct">
 				<label for="title">Title:</label>
-				<input type="text" id="title" v-model="newProduct.title" required />
+				<input type="text" id="title" v-model="title" required />
 				<label for="description">Description:</label>
-				<input
-					type="text"
-					id="description"
-					v-model="newProduct.description"
-					required
-				/>
+				<input type="text" id="description" v-model="description" required />
 				<label for="price">Price:</label>
-				<input type="number" id="price" v-model="newProduct.price" required />
+				<input type="number" id="price" v-model="price" required />
 				<label for="image">Image:</label>
-				<input type="text" id="image" v-model="newProduct.image" required />
-				<button type="submit">Add</button>
-				<button type="button" @click="closeForm">Close</button>
+				<input type="text" id="image" v-model="image" required />
+				<button type="submit">Save</button>
+				<button type="button" @click="showForm = false">Close</button>
 			</form>
 		</div>
 	</div>

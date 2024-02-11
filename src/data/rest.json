@@ -1,11 +1,11 @@
 {
   "products": [
     {
-      "id": "9",
-      "title": "Electric Standing Desk",
+      "title": "Electric Standing Desk ",
       "description": "Create a comfortable and ergonomic workspace with this adjustable electric standing desk.",
-      "price": 449.99,
-      "image": "https://via.placeholder.com/150"
+      "price": 449,
+      "image": "https://via.placeholder.com/150",
+      "id": "9"
     },
     {
       "id": "10",
@@ -363,6 +363,13 @@
       "description": "Effortlessly heat and cook your meals with this compact countertop microwave featuring multiple cooking presets.",
       "price": 79.99,
       "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "d2e9",
+      "title": "Dolore elit id volu",
+      "description": "Nisi alias nulla exp",
+      "price": 512,
+      "image": "Iste modi omnis omni"
     }
   ]
 }

@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
+import ProductForm from '@/components/ProductForm.vue';
 
 const props = defineProps({
 	id: {
@@ -27,6 +28,15 @@ async function fetchData() {
 	}
 }
 
+async function updateProduct(product) {
+	try {
+		await axios.put(API_URL, product);
+		router.push('/');
+	} catch (error) {
+		console.error(error);
+	}
+}
+
 async function deleteProduct() {
 	try {
 		await axios.delete(API_URL);
@@ -43,6 +53,7 @@ async function deleteProduct() {
 		<img :src="product.image" :alt="product.title" class="product-image" />
 		<p>Description: {{ product.description }}</p>
 		<p>Price: {{ product.price }}</p>
+		<product-form :product="product" @update-product="updateProduct" />
 		<router-link to="/" class="back-button">Back</router-link>
 		<button @click="deleteProduct" class="delete-button">Delete</button>
 	</div>
